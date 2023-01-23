@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>XRent - Rent a car as you like!</title>
+        <link rel="shortcut icon" href="./assets/images/logo.jpg" type="XRent">
+        <link rel="stylesheet" href="./assets/css/style-4.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<body>
+
+		<div class="text-container">
+			<h1>Success!<br><span>Your order will be sent via email</span></h1>
+			<div class="animated-text">
+				<h2>Thank</h2>
+				<h2>You</h2>
+				<h2>For</h2>
+				<h2>Trusting</h2>
+				<h2>XRent!</h2>
+			</div>
+		</div>
+		<div class="animation-container">
+			<div class="burst">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+		function createBurst(){
+			let animContainer = document.querySelector('.animation-container');
+			let burst = document.querySelector('.burst');
+
+			burst.style.top = Math.random() * 550 + 'px';
+			burst.style.left = Math.random() * 750 + 'px';
+
+			let burstClone = burst.cloneNode(true);
+			animContainer.appendChild(burstClone);
+
+			setTimeout(() => {
+				burstClone.remove();
+			}, 20000);
+		}
+		setInterval(createBurst, 2000);
+		</script>
+
+	</body>
+</html>
+      
